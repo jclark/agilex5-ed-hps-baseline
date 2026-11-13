@@ -26,3 +26,18 @@ set_multicycle_path 1 -hold -from [get_registers {*|u_agilex_hps|intel_agilex_5_
 # Use -no_synchronizer for the following intra-clock false paths
 set_false_path -no_synchronizer -from [get_registers {*|u_clks_and_rsts|clks_and_rsts|fpga_reset_n_sync|dreg[1]}] -to [get_registers {*|altera_reset_synchronizer_int_chain[1]}]
 set_false_path -no_synchronizer -from [get_registers {*|u_fabric_subsys|rst_controller|r_sync_rst}] -to [get_registers {*|altera_reset_synchronizer_int_chain[1]}]
+# HDMI scan-out (src/hdmi_scanout.sv): the pixel clock comes from its own PLL and is unrelated to
+# the system clock. The crossings are a gray-coded FIFO and two-stage synchronisers; the FIFO
+# word is stable when the pixel side reads it. (By register name: the pixel clock is not yet
+# defined when this file is read, so it cannot be named in a clock group here.)
+set_false_path -to [get_registers {*u_hdmi_scanout|rgray_m1[*]}]
+set_false_path -to [get_registers {*u_hdmi_scanout|wgray_p1[*]}]
+set_false_path -to [get_registers {*u_hdmi_scanout|flush_m1}]
+set_false_path -to [get_registers {*u_hdmi_scanout|pix_rst_sr[*]}]
+set_false_path -to [get_registers {*u_hdmi_scanout|ack_p1}]
+# The FIFO word is written on the memory clock and read by the pixel side when it is stable. Cut
+# that crossing by its launch clock. (Cutting it by the name fifo_mem also cut the path from the
+# RAM's read-address registers, which are on the pixel clock and must be timed: review, 2026-11-13.)
+set_false_path -from $MAIN_CLOCK -to [get_registers {*u_hdmi_scanout|vid_d[*]}]
+# HDMI diagnostic on LED 2 comes from the pixel clock domain; an LED needs no timing.
+set_false_path -to [get_ports {fpga_user_leds[2]}]

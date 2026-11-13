@@ -44,3 +44,6 @@ board.info
 
 # Simscript directories
 /sim_setup_baseline*/
+
+# Build outputs
+out/

@@ -138,6 +138,37 @@ Altera and sold by Altera or its authorized distributors.-->
           <ipxact:value>&lt;systemInfosDefinition&gt;
     &lt;connPtSystemInfos&gt;
         &lt;entry&gt;
+            &lt;key&gt;I2C0_scl_i&lt;/key&gt;
+            &lt;value&gt;
+                &lt;connectionPointName&gt;I2C0_scl_i&lt;/connectionPointName&gt;
+                &lt;suppliedSystemInfos&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;CLOCK_RATE&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
+                    &lt;/entry&gt;
+                &lt;/suppliedSystemInfos&gt;
+                &lt;consumedSystemInfos/&gt;
+            &lt;/value&gt;
+        &lt;/entry&gt;
+        &lt;entry&gt;
+            &lt;key&gt;I2C0_scl_oe&lt;/key&gt;
+            &lt;value&gt;
+                &lt;connectionPointName&gt;I2C0_scl_oe&lt;/connectionPointName&gt;
+                &lt;suppliedSystemInfos/&gt;
+                &lt;consumedSystemInfos&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;CLOCK_RATE&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/consumedSystemInfos&gt;
+            &lt;/value&gt;
+        &lt;/entry&gt;
+        &lt;entry&gt;
             &lt;key&gt;emif_hps_emif_ref_clk_0&lt;/key&gt;
             &lt;value&gt;
                 &lt;connectionPointName&gt;emif_hps_emif_ref_clk_0&lt;/connectionPointName&gt;
@@ -217,7 +248,7 @@ Altera and sold by Altera or its authorized distributors.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;7&lt;/value&gt;
+                        &lt;value&gt;12&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -225,7 +256,7 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;7&lt;/value&gt;
+                        &lt;value&gt;12&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
@@ -251,7 +282,7 @@ Altera and sold by Altera or its authorized distributors.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;7&lt;/value&gt;
+                        &lt;value&gt;12&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -259,7 +290,7 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;7&lt;/value&gt;
+                        &lt;value&gt;12&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
@@ -289,7 +320,7 @@ Altera and sold by Altera or its authorized distributors.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;7&lt;/value&gt;
+                        &lt;value&gt;12&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -297,7 +328,7 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;7&lt;/value&gt;
+                        &lt;value&gt;12&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
@@ -327,7 +358,7 @@ Altera and sold by Altera or its authorized distributors.-->
                 &lt;suppliedSystemInfos&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;7&lt;/value&gt;
+                        &lt;value&gt;12&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -335,10 +366,23 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                        &lt;value&gt;7&lt;/value&gt;
+                        &lt;value&gt;12&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/suppliedSystemInfos&gt;
                 &lt;consumedSystemInfos/&gt;
+            &lt;/value&gt;
+        &lt;/entry&gt;
+        &lt;entry&gt;
+            &lt;key&gt;spim0_sclk_out&lt;/key&gt;
+            &lt;value&gt;
+                &lt;connectionPointName&gt;spim0_sclk_out&lt;/connectionPointName&gt;
+                &lt;suppliedSystemInfos/&gt;
+                &lt;consumedSystemInfos&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;CLOCK_RATE&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/consumedSystemInfos&gt;
             &lt;/value&gt;
         &lt;/entry&gt;
         &lt;entry&gt;
@@ -914,7 +958,7 @@ Altera and sold by Altera or its authorized distributors.-->
             <ipxact:parameter parameterId="AUTO_EMIF_HPS_EMIF_REF_CLK_0_CLOCK_DOMAIN" type="longint">
               <ipxact:name>AUTO_EMIF_HPS_EMIF_REF_CLK_0_CLOCK_DOMAIN</ipxact:name>
               <ipxact:displayName>Auto CLOCK_DOMAIN</ipxact:displayName>
-              <ipxact:value>1</ipxact:value>
+              <ipxact:value>3</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="AUTO_EMIF_HPS_EMIF_REF_CLK_0_CLOCK_RATE" type="longint">
               <ipxact:name>AUTO_EMIF_HPS_EMIF_REF_CLK_0_CLOCK_RATE</ipxact:name>
@@ -924,7 +968,7 @@ Altera and sold by Altera or its authorized distributors.-->
             <ipxact:parameter parameterId="AUTO_EMIF_HPS_EMIF_REF_CLK_0_RESET_DOMAIN" type="longint">
               <ipxact:name>AUTO_EMIF_HPS_EMIF_REF_CLK_0_RESET_DOMAIN</ipxact:name>
               <ipxact:displayName>Auto RESET_DOMAIN</ipxact:displayName>
-              <ipxact:value>1</ipxact:value>
+              <ipxact:value>3</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="AUTO_F2H_IRQ0_IN_INTERRUPTS_USED" type="string">
               <ipxact:name>AUTO_F2H_IRQ0_IN_INTERRUPTS_USED</ipxact:name>
@@ -939,7 +983,7 @@ Altera and sold by Altera or its authorized distributors.-->
             <ipxact:parameter parameterId="AUTO_F2SDRAM_CLK_CLOCK_DOMAIN" type="longint">
               <ipxact:name>AUTO_F2SDRAM_CLK_CLOCK_DOMAIN</ipxact:name>
               <ipxact:displayName>Auto CLOCK_DOMAIN</ipxact:displayName>
-              <ipxact:value>2</ipxact:value>
+              <ipxact:value>4</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="AUTO_F2SDRAM_CLK_CLOCK_RATE" type="longint">
               <ipxact:name>AUTO_F2SDRAM_CLK_CLOCK_RATE</ipxact:name>
@@ -949,7 +993,7 @@ Altera and sold by Altera or its authorized distributors.-->
             <ipxact:parameter parameterId="AUTO_F2SDRAM_CLK_RESET_DOMAIN" type="longint">
               <ipxact:name>AUTO_F2SDRAM_CLK_RESET_DOMAIN</ipxact:name>
               <ipxact:displayName>Auto RESET_DOMAIN</ipxact:displayName>
-              <ipxact:value>2</ipxact:value>
+              <ipxact:value>4</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="AUTO_F2SDRAM_CPU_INFO_ID" type="string">
               <ipxact:name>AUTO_F2SDRAM_CPU_INFO_ID</ipxact:name>
@@ -959,7 +1003,7 @@ Altera and sold by Altera or its authorized distributors.-->
             <ipxact:parameter parameterId="AUTO_FPGA2HPS_CLK_CLOCK_DOMAIN" type="longint">
               <ipxact:name>AUTO_FPGA2HPS_CLK_CLOCK_DOMAIN</ipxact:name>
               <ipxact:displayName>Auto CLOCK_DOMAIN</ipxact:displayName>
-              <ipxact:value>4</ipxact:value>
+              <ipxact:value>6</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="AUTO_FPGA2HPS_CLK_CLOCK_RATE" type="longint">
               <ipxact:name>AUTO_FPGA2HPS_CLK_CLOCK_RATE</ipxact:name>
@@ -969,7 +1013,7 @@ Altera and sold by Altera or its authorized distributors.-->
             <ipxact:parameter parameterId="AUTO_FPGA2HPS_CLK_RESET_DOMAIN" type="longint">
               <ipxact:name>AUTO_FPGA2HPS_CLK_RESET_DOMAIN</ipxact:name>
               <ipxact:displayName>Auto RESET_DOMAIN</ipxact:displayName>
-              <ipxact:value>4</ipxact:value>
+              <ipxact:value>6</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="AUTO_FPGA2HPS_CPU_INFO_ID" type="string">
               <ipxact:name>AUTO_FPGA2HPS_CPU_INFO_ID</ipxact:name>
@@ -994,7 +1038,7 @@ Altera and sold by Altera or its authorized distributors.-->
             <ipxact:parameter parameterId="AUTO_HPS2FPGA_CLK_CLOCK_DOMAIN" type="longint">
               <ipxact:name>AUTO_HPS2FPGA_CLK_CLOCK_DOMAIN</ipxact:name>
               <ipxact:displayName>Auto CLOCK_DOMAIN</ipxact:displayName>
-              <ipxact:value>9</ipxact:value>
+              <ipxact:value>11</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="AUTO_HPS2FPGA_CLK_CLOCK_RATE" type="longint">
               <ipxact:name>AUTO_HPS2FPGA_CLK_CLOCK_RATE</ipxact:name>
@@ -1004,7 +1048,22 @@ Altera and sold by Altera or its authorized distributors.-->
             <ipxact:parameter parameterId="AUTO_HPS2FPGA_CLK_RESET_DOMAIN" type="longint">
               <ipxact:name>AUTO_HPS2FPGA_CLK_RESET_DOMAIN</ipxact:name>
               <ipxact:displayName>Auto RESET_DOMAIN</ipxact:displayName>
-              <ipxact:value>9</ipxact:value>
+              <ipxact:value>11</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="AUTO_I2C0_SCL_I_CLOCK_DOMAIN" type="longint">
+              <ipxact:name>AUTO_I2C0_SCL_I_CLOCK_DOMAIN</ipxact:name>
+              <ipxact:displayName>Auto CLOCK_DOMAIN</ipxact:displayName>
+              <ipxact:value>1</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="AUTO_I2C0_SCL_I_CLOCK_RATE" type="longint">
+              <ipxact:name>AUTO_I2C0_SCL_I_CLOCK_RATE</ipxact:name>
+              <ipxact:displayName>Auto CLOCK_RATE</ipxact:displayName>
+              <ipxact:value>-1</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="AUTO_I2C0_SCL_I_RESET_DOMAIN" type="longint">
+              <ipxact:name>AUTO_I2C0_SCL_I_RESET_DOMAIN</ipxact:name>
+              <ipxact:displayName>Auto RESET_DOMAIN</ipxact:displayName>
+              <ipxact:value>1</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="AUTO_LWHPS2FPGA_ADDRESS_MAP" type="string">
               <ipxact:name>AUTO_LWHPS2FPGA_ADDRESS_MAP</ipxact:name>
@@ -1019,7 +1078,7 @@ Altera and sold by Altera or its authorized distributors.-->
             <ipxact:parameter parameterId="AUTO_LWHPS2FPGA_CLK_CLOCK_DOMAIN" type="longint">
               <ipxact:name>AUTO_LWHPS2FPGA_CLK_CLOCK_DOMAIN</ipxact:name>
               <ipxact:displayName>Auto CLOCK_DOMAIN</ipxact:displayName>
-              <ipxact:value>11</ipxact:value>
+              <ipxact:value>13</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="AUTO_LWHPS2FPGA_CLK_CLOCK_RATE" type="longint">
               <ipxact:name>AUTO_LWHPS2FPGA_CLK_CLOCK_RATE</ipxact:name>
@@ -1029,7 +1088,7 @@ Altera and sold by Altera or its authorized distributors.-->
             <ipxact:parameter parameterId="AUTO_LWHPS2FPGA_CLK_RESET_DOMAIN" type="longint">
               <ipxact:name>AUTO_LWHPS2FPGA_CLK_RESET_DOMAIN</ipxact:name>
               <ipxact:displayName>Auto RESET_DOMAIN</ipxact:displayName>
-              <ipxact:value>11</ipxact:value>
+              <ipxact:value>13</ipxact:value>
             </ipxact:parameter>
             <ipxact:parameter parameterId="AUTO_UNIQUE_ID" type="string">
               <ipxact:name>AUTO_UNIQUE_ID</ipxact:name>
@@ -1049,6 +1108,11 @@ Altera and sold by Altera or its authorized distributors.-->
     <altera:preserved_ports_for_debug></altera:preserved_ports_for_debug>
     <altera:altera_group_hierarchy_contents></altera:altera_group_hierarchy_contents>
     <altera:altera_interface_boundary>
+      <altera:interface_mapping altera:name="I2C0" altera:internal="u_hps_subsys.I2C0" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="I2C0_scl_i" altera:internal="u_hps_subsys.I2C0_scl_i" altera:type="clock" altera:dir="end"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="I2C0_scl_oe" altera:internal="u_hps_subsys.I2C0_scl_oe" altera:type="clock" altera:dir="start"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="emac0_i2c" altera:internal="u_hps_subsys.emac0_i2c" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="emac0_ptp" altera:internal="u_hps_subsys.emac0_ptp" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="emif_hps_emif_mem_0" altera:internal="u_hps_subsys.emif_hps_emif_mem_0" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="emif_hps_emif_mem_ck_0" altera:internal="u_hps_subsys.emif_hps_emif_mem_ck_0" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="emif_hps_emif_mem_reset_n" altera:internal="u_hps_subsys.emif_hps_emif_mem_reset_n" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
@@ -1074,8 +1138,11 @@ Altera and sold by Altera or its authorized distributors.-->
       <altera:interface_mapping altera:name="lwhps2fpga_clk" altera:internal="u_hps_subsys.lwhps2fpga_clk" altera:type="clock" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="lwhps2fpga_rst" altera:internal="u_hps_subsys.lwhps2fpga_rst" altera:type="reset" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="pll_refclk_100" altera:internal="u_clks_and_rsts.fpga_clk_100" altera:type="clock" altera:dir="end"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="spim0" altera:internal="u_hps_subsys.spim0" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="spim0_sclk_out" altera:internal="u_hps_subsys.spim0_sclk_out" altera:type="clock" altera:dir="start"></altera:interface_mapping>
       <altera:interface_mapping altera:name="system_clock" altera:internal="u_clks_and_rsts.system_clock" altera:type="clock" altera:dir="start"></altera:interface_mapping>
       <altera:interface_mapping altera:name="system_reset_n" altera:internal="u_clks_and_rsts.system_reset_n" altera:type="reset" altera:dir="start"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="uart0" altera:internal="u_hps_subsys.uart0" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
     </altera:altera_interface_boundary>
     <ipxact:components>
       <ipxact:component>
