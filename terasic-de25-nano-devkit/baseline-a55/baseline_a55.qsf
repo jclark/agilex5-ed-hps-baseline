@@ -28,7 +28,7 @@
 # Quartus version assignments
 #============================================================
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "25.1.0 PRO EDITION"
-set_global_assignment -name LAST_QUARTUS_VERSION "26.1.1 Pro Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "26.3.0 Pro Edition"
 
 #============================================================
 # Device properties
@@ -306,34 +306,55 @@ set_global_assignment -name PWRMGT_VOLTAGE_OUTPUT_FORMAT "LINEAR FORMAT"
 set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-12"
 
 #============================================================
-# GPIO 0 header (JP1) pins 3, 5, 7 to 10, 19, 21, 23, 24, and the HDMI/fan I2C bus
-# Pin numbers from the DE25-Nano user manual, tables 3-7 and 3-12
+# GPIO headers JP1 (GPIO 0) and JP2 (GPIO 1), and the HDMI/fan I2C bus
+# Pin numbers from Terasic's golden top (DE25-Nano resource package, revision B) and the
+# DE25-Nano user manual, tables 3-7 and 3-12:
+# GPIOn_D[0..9] = header pins 1-10, [10..25] = 13-28, [26..35] = 31-40.
 #============================================================
-set_location_assignment PIN_P2 -to jp1_9_ptp_trig
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_9_ptp_trig
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to jp1_9_ptp_trig
-set_location_assignment PIN_L1 -to jp1_7_ptp_pps
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_7_ptp_pps
+set_location_assignment PIN_H14 -to jp1_14_ptp_trig
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_14_ptp_trig
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to jp1_14_ptp_trig
+set_location_assignment PIN_U2 -to jp1_6_ptp_pps
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_6_ptp_pps
 set_location_assignment PIN_B3 -to jp1_10_uart0_rx
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_10_uart0_rx
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to jp1_10_uart0_rx
 set_location_assignment PIN_F2 -to jp1_8_uart0_tx
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_8_uart0_tx
-set_location_assignment PIN_Y2 -to jp1_5_i2c_scl
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_5_i2c_scl
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to jp1_5_i2c_scl
-set_location_assignment PIN_C2 -to jp1_3_i2c_sda
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_3_i2c_sda
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to jp1_3_i2c_sda
-set_location_assignment PIN_B17 -to jp1_23_spi_sclk
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_23_spi_sclk
-set_location_assignment PIN_C14 -to jp1_19_spi_mosi
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_19_spi_mosi
-set_location_assignment PIN_A15 -to jp1_21_spi_miso
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_21_spi_miso
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to jp1_21_spi_miso
-set_location_assignment PIN_B15 -to jp1_24_spi_ss0_n
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_24_spi_ss0_n
+set_location_assignment PIN_V14 -to jp1_36_i2c_scl
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_36_i2c_scl
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to jp1_36_i2c_scl
+set_location_assignment PIN_AL31 -to jp1_38_i2c_sda
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_38_i2c_sda
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to jp1_38_i2c_sda
+set_location_assignment PIN_R19 -to jp1_33_spi_sclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_33_spi_sclk
+set_location_assignment PIN_V19 -to jp1_35_spi_mosi
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_35_spi_mosi
+set_location_assignment PIN_AG31 -to jp1_37_spi_miso
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_37_spi_miso
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to jp1_37_spi_miso
+set_location_assignment PIN_AL37 -to jp1_39_spi_ss0_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_39_spi_ss0_n
+set_location_assignment PIN_AL34 -to jp1_40_spi_ss1_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp1_40_spi_ss1_n
+set_location_assignment PIN_DC1 -to jp2_36_i2c_scl
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp2_36_i2c_scl
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to jp2_36_i2c_scl
+set_location_assignment PIN_CE6 -to jp2_38_i2c_sda
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp2_38_i2c_sda
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to jp2_38_i2c_sda
+set_location_assignment PIN_DH2 -to jp2_33_spi_sclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp2_33_spi_sclk
+set_location_assignment PIN_DC2 -to jp2_35_spi_mosi
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp2_35_spi_mosi
+set_location_assignment PIN_BV19 -to jp2_37_spi_miso
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp2_37_spi_miso
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to jp2_37_spi_miso
+set_location_assignment PIN_BV11 -to jp2_39_spi_ss0_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp2_39_spi_ss0_n
+set_location_assignment PIN_BV16 -to jp2_40_spi_ss1_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to jp2_40_spi_ss1_n
 set_location_assignment PIN_BT1 -to hdmi_i2c_scl
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_i2c_scl
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to hdmi_i2c_scl

@@ -18,10 +18,10 @@ Altera and sold by Altera or its authorized distributors.-->
   <ipxact:busInterfaces>
     <ipxact:busInterface>
       <ipxact:name>refclk</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="clock" version="26.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="clock" version="26.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="26.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="26.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -65,10 +65,10 @@ Altera and sold by Altera or its authorized distributors.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>locked</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="conduit" version="26.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="26.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="26.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="26.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -112,10 +112,10 @@ Altera and sold by Altera or its authorized distributors.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>reset</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="reset" version="26.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="reset" version="26.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="26.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="26.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -154,10 +154,10 @@ Altera and sold by Altera or its authorized distributors.-->
     </ipxact:busInterface>
     <ipxact:busInterface>
       <ipxact:name>outclk0</ipxact:name>
-      <ipxact:busType vendor="intel" library="intel" name="clock" version="26.1"></ipxact:busType>
+      <ipxact:busType vendor="intel" library="intel" name="clock" version="26.3"></ipxact:busType>
       <ipxact:abstractionTypes>
         <ipxact:abstractionType>
-          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="26.1"></ipxact:abstractionRef>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="26.3"></ipxact:abstractionRef>
           <ipxact:portMaps>
             <ipxact:portMap>
               <ipxact:logicalPort>
@@ -487,6 +487,11 @@ Altera and sold by Altera or its authorized distributors.-->
           <ipxact:displayName>IOPLL Type</ipxact:displayName>
           <ipxact:value>I/O Bank</ipxact:value>
         </ipxact:parameter>
+        <ipxact:parameter parameterId="gui_location_type_g1" type="string">
+          <ipxact:name>gui_location_type_g1</ipxact:name>
+          <ipxact:displayName>IOPLL Type</ipxact:displayName>
+          <ipxact:value>General Purpose</ipxact:value>
+        </ipxact:parameter>
         <ipxact:parameter parameterId="gui_use_logical" type="bit">
           <ipxact:name>gui_use_logical</ipxact:name>
           <ipxact:displayName>Use logical PLL</ipxact:displayName>
@@ -627,10 +632,10 @@ Altera and sold by Altera or its authorized distributors.-->
           <ipxact:displayName>Multiply Factor (M-Counter)</ipxact:displayName>
           <ipxact:value>6</ipxact:value>
         </ipxact:parameter>
-        <ipxact:parameter parameterId="gui_multiply_fraction" type="int">
+        <ipxact:parameter parameterId="gui_multiply_fraction" type="real">
           <ipxact:name>gui_multiply_fraction</ipxact:name>
           <ipxact:displayName>Multiply Factor (Fraction)</ipxact:displayName>
-          <ipxact:value>0</ipxact:value>
+          <ipxact:value>0.0</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="gui_use_slvs_refclk" type="bit">
           <ipxact:name>gui_use_slvs_refclk</ipxact:name>
@@ -646,6 +651,11 @@ Altera and sold by Altera or its authorized distributors.-->
           <ipxact:name>gui_divide_factor_n</ipxact:name>
           <ipxact:displayName>Divide Factor (N-Counter)</ipxact:displayName>
           <ipxact:value>1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="gui_divide_factor_d" type="int">
+          <ipxact:name>gui_divide_factor_d</ipxact:name>
+          <ipxact:displayName>Divide Factor (D-Counter)</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="gui_frac_multiply_factor" type="longint">
           <ipxact:name>gui_frac_multiply_factor</ipxact:name>
@@ -1606,6 +1616,21 @@ Altera and sold by Altera or its authorized distributors.-->
           <ipxact:name>gui_simulation_type</ipxact:name>
           <ipxact:displayName>Force full PLL simulation model</ipxact:displayName>
           <ipxact:value>true</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="gui_pll_type_g1" type="string">
+          <ipxact:name>gui_pll_type_g1</ipxact:name>
+          <ipxact:displayName>pll_type_g1</ipxact:displayName>
+          <ipxact:value>gppll</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="gui_set_freq" type="string">
+          <ipxact:name>gui_set_freq</ipxact:name>
+          <ipxact:displayName>set_freq</ipxact:displayName>
+          <ipxact:value>FREQ_OUT</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="gui_set_fractional" type="string">
+          <ipxact:name>gui_set_fractional</ipxact:name>
+          <ipxact:displayName>set_fractional</ipxact:displayName>
+          <ipxact:value>FRAC_OFF</ipxact:value>
         </ipxact:parameter>
         <ipxact:parameter parameterId="hp_qsys_scripting_mode" type="bit">
           <ipxact:name>hp_qsys_scripting_mode</ipxact:name>

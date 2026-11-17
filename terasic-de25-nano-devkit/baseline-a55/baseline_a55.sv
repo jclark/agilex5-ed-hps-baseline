@@ -72,17 +72,31 @@ module baseline_a55 (
     // HPS External Oscillator
     input  wire         hps_osc_clk,
     //
-    // GPIO 0 header (JP1): UART, I2C and SPI on the pins a Raspberry Pi has them on; 5 V on pin 11, GND on pin 12
-    input  wire         jp1_9_ptp_trig,    // EMAC0 aux snapshot trigger 1 (extts)
-    output wire         jp1_7_ptp_pps,     // EMAC0 PPS output 1 (perout)
-    input  wire         jp1_10_uart0_rx,    // HPS UART0 RX (GNSS TX)
+    // Hook: the ports a derived design adds (fpga/README.md, "Building on this design").
+    // In the base the file is empty.
+`include "ext/ports.svh"
+    //
+    // GPIO 0 header (JP1): 5 V on pin 11, GND on 12 and 30, 3.3 V on 29
+    input  wire         jp1_14_ptp_trig,   // EMAC0 aux snapshot trigger 1 (extts): PPS in
+    output wire         jp1_6_ptp_pps,     // EMAC0 PPS output 1 (perout)
+    input  wire         jp1_10_uart0_rx,   // HPS UART0 RX (GNSS TX)
     output wire         jp1_8_uart0_tx,    // HPS UART0 TX (GNSS RX)
-    inout  wire         jp1_5_i2c_scl,     // HPS I2C_EMAC0, spare
-    inout  wire         jp1_3_i2c_sda,
-    output wire         jp1_23_spi_sclk,    // HPS SPI master 0, spare
-    output wire         jp1_19_spi_mosi,
-    input  wire         jp1_21_spi_miso,
-    output wire         jp1_24_spi_ss0_n,
+    inout  wire         jp1_36_i2c_scl,    // HPS I2C_EMAC0 (Linux i2c2)
+    inout  wire         jp1_38_i2c_sda,
+    output wire         jp1_33_spi_sclk,   // HPS SPI master 0 (Linux spi0)
+    output wire         jp1_35_spi_mosi,
+    input  wire         jp1_37_spi_miso,
+    output wire         jp1_39_spi_ss0_n,
+    output wire         jp1_40_spi_ss1_n,
+    //
+    // GPIO 1 header (JP2): the same positions
+    inout  wire         jp2_36_i2c_scl,    // HPS I2C_EMAC1 (Linux i2c3)
+    inout  wire         jp2_38_i2c_sda,
+    output wire         jp2_33_spi_sclk,   // HPS SPI master 1 (Linux spi1)
+    output wire         jp2_35_spi_mosi,
+    input  wire         jp2_37_spi_miso,
+    output wire         jp2_39_spi_ss0_n,
+    output wire         jp2_40_spi_ss1_n,
     //
     // I2C bus of the HDMI transmitter (ADV7513) and the fan controller (AMC6821), on HPS I2C0
     inout  wire         hdmi_i2c_scl,
@@ -172,9 +186,9 @@ module baseline_a55 (
     assign fpga_user_leds = {heartbeat_led, fpga_leds[6:3], hdmi_diag};
 
 
-    // Tie off all fabric to HPS interrupts
+    // Fabric to HPS interrupts (GIC SPI 49 + bit, level). Driven in ext/logic.svh: the base
+    // ties them all off.
     wire [31:0] fpga2hps_interrupts;
-    assign fpga2hps_interrupts = '0;
 
     // Directly loop reset request signal to the reset acknowledge signals.
     logic h2f_warm_reset_handshake_reset_ack;
@@ -183,13 +197,24 @@ module baseline_a55 (
     assign h2f_warm_reset_handshake_reset_ack = h2f_warm_reset_handshake_reset_req;
 
     // Baseline-A55 system top module
-    wire i2c0_scl_oe, i2c0_sda_oe, i2c2_scl_oe, i2c2_sda_oe;
+    wire i2c0_scl_oe, i2c0_sda_oe, i2c2_scl_oe, i2c2_sda_oe, i2c3_scl_oe, i2c3_sda_oe;
+    // The timestamp hubs' counter input from the FPGA. Driven in ext/logic.svh: the base
+    // gives it the system clock and a count of zero.
+    wire         hub_cnt_clk;
+    wire [63:0]  hub_cnt;
+    wire         emac1_mdo, emac1_mdoe;
     wire         hdmi_pix_clk, hdmi_pll_locked;
     wire         hdmi_dbg_bad;
     wire [26:0]  hdmi_mem_address;
     wire [4:0]   hdmi_mem_burstcount;
     wire         hdmi_mem_read, hdmi_mem_readdatavalid, hdmi_mem_waitrequest;
     wire [255:0] hdmi_mem_readdata;
+
+    // Hook: the declarations and logic of a derived design. It comes before the system below
+    // so that the hook among its connections can use what is declared here. The file must
+    // drive fpga2hps_interrupts, hub_cnt_clk and hub_cnt; the base's file ties them off and
+    // does nothing else.
+`include "ext/logic.svh"
 
     baseline_top u_baseline_top (
         // Board PLL reference clock
@@ -273,9 +298,13 @@ module baseline_a55 (
         .niosv_pio_in_export                  (niosv_pio_in),
         .niosv_pio_out_export                 (niosv_pio_out),
         //
+        // Hook: the connections a derived design adds, to what its Platform Designer
+        // scripts export from baseline_top. In the base the file is empty.
+`include "ext/connections.svh"
+        //
         // EMAC0 PTP
-        .emac0_ptp_mac_ptp_trig               (jp1_9_ptp_trig),
-        .emac0_ptp_mac_ptp_pps                (jp1_7_ptp_pps),
+        .emac0_ptp_mac_ptp_trig               (jp1_14_ptp_trig),
+        .emac0_ptp_mac_ptp_pps                (jp1_6_ptp_pps),
         .emac0_ptp_mac_ptp_tstmp_data         (),
         .emac0_ptp_mac_ptp_tstmp_en           (),
         // UART0, no flow control
@@ -294,21 +323,61 @@ module baseline_a55 (
         .I2C0_scl_oe_clk                      (i2c0_scl_oe),
         .I2C0_sda_i                           (hdmi_i2c_sda),
         .I2C0_sda_oe                          (i2c0_sda_oe),
-        // I2C_EMAC0: spare, on the header
-        .emac0_i2c_mac_scl_i                  (jp1_5_i2c_scl),
+        // I2C_EMAC0, on JP1
+        .emac0_i2c_mac_scl_i                  (jp1_36_i2c_scl),
         .emac0_i2c_mac_scl_oe                 (i2c2_scl_oe),
-        .emac0_i2c_mac_sda_i                  (jp1_3_i2c_sda),
+        .emac0_i2c_mac_sda_i                  (jp1_38_i2c_sda),
         .emac0_i2c_mac_sda_oe                 (i2c2_sda_oe),
-        // SPI master 0: spare, on the header
-        .spim0_sclk_out_clk                   (jp1_23_spi_sclk),
-        .spim0_mosi_o                         (jp1_19_spi_mosi),
+        // SPI master 0, on JP1
+        .spim0_sclk_out_clk                   (jp1_33_spi_sclk),
+        .spim0_mosi_o                         (jp1_35_spi_mosi),
         .spim0_mosi_oe                        (),
-        .spim0_miso_i                         (jp1_21_spi_miso),
+        .spim0_miso_i                         (jp1_37_spi_miso),
         .spim0_ss_in_n                        (1'b1),
-        .spim0_ss0_n_o                        (jp1_24_spi_ss0_n),
-        .spim0_ss1_n_o                        (),
+        .spim0_ss0_n_o                        (jp1_39_spi_ss0_n),
+        .spim0_ss1_n_o                        (jp1_40_spi_ss1_n),
         .spim0_ss2_n_o                        (),
         .spim0_ss3_n_o                        (),
+        // I2C_EMAC1 and SPI master 1, on JP2
+        .emac1_i2c_mac_scl_i                  (jp2_36_i2c_scl),
+        .emac1_i2c_mac_scl_oe                 (i2c3_scl_oe),
+        .emac1_i2c_mac_sda_i                  (jp2_38_i2c_sda),
+        .emac1_i2c_mac_sda_oe                 (i2c3_sda_oe),
+        .spim1_sclk_out_clk                   (jp2_33_spi_sclk),
+        .spim1_mosi_o                         (jp2_35_spi_mosi),
+        .spim1_mosi_oe                        (),
+        .spim1_miso_i                         (jp2_37_spi_miso),
+        .spim1_ss_in_n                        (1'b1),
+        .spim1_ss0_n_o                        (jp2_39_spi_ss0_n),
+        .spim1_ss1_n_o                        (jp2_40_spi_ss1_n),
+        .spim1_ss2_n_o                        (),
+        .spim1_ss3_n_o                        (),
+        // The timestamp hubs' counter input (see hub_cnt above)
+        .emac_timestamp_clk_clk               (hub_cnt_clk),
+        .emac_timestamp_data_data_in          (hub_cnt),
+        // EMAC1: routed to the FPGA only so that the SoC offers the hubs' counter input; no
+        // PHY. The SoC's manual wants its receive and transmit clocks running before it
+        // leaves reset: it gets the system clock. Its MDIO is looped back (idle high), so
+        // its hub's registers can be read whether the hub answers inside the SoC or on the
+        // MDIO lines.
+        .emac1_mac_tx_clk_i                   (sys_clk_100),
+        .emac1_mac_rx_clk                     (sys_clk_100),
+        .emac1_mac_rxdv                       (1'b0),
+        .emac1_mac_rxer                       (1'b0),
+        .emac1_mac_rxd                        (8'd0),
+        .emac1_mac_col                        (1'b0),
+        .emac1_mac_crs                        (1'b0),
+        .emac1_mac_tx_clk_o                   (),
+        .emac1_mac_rst_tx_n                   (),
+        .emac1_mac_rst_rx_n                   (),
+        .emac1_mac_txen                       (),
+        .emac1_mac_txer                       (),
+        .emac1_mac_speed                      (),
+        .emac1_mac_txd_o                      (),
+        .emac1_mdio_mac_mdc                   (),
+        .emac1_mdio_mac_mdi                   (emac1_mdoe ? emac1_mdo : 1'b1),
+        .emac1_mdio_mac_mdo                   (emac1_mdo),
+        .emac1_mdio_mac_mdoe                  (emac1_mdoe),
         // HDMI: pixel clock, and the frame buffer read port into HPS memory
         .hdmi_clk50_clk                       (hdmi_clk50),
         .hdmi_pix_clk_clk                     (hdmi_pix_clk),
@@ -373,7 +442,9 @@ module baseline_a55 (
     // I2C lines are open drain: drive low or release.
     assign hdmi_i2c_scl   = i2c0_scl_oe ? 1'b0 : 1'bz;
     assign hdmi_i2c_sda   = i2c0_sda_oe ? 1'b0 : 1'bz;
-    assign jp1_5_i2c_scl = i2c2_scl_oe ? 1'b0 : 1'bz;
-    assign jp1_3_i2c_sda = i2c2_sda_oe ? 1'b0 : 1'bz;
+    assign jp1_36_i2c_scl = i2c2_scl_oe ? 1'b0 : 1'bz;
+    assign jp1_38_i2c_sda = i2c2_sda_oe ? 1'b0 : 1'bz;
+    assign jp2_36_i2c_scl = i2c3_scl_oe ? 1'b0 : 1'bz;
+    assign jp2_38_i2c_sda = i2c3_sda_oe ? 1'b0 : 1'bz;
 
 endmodule

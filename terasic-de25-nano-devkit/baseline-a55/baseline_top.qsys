@@ -243,6 +243,24 @@ Altera and sold by Altera or its authorized distributors.-->
             &lt;/value&gt;
         &lt;/entry&gt;
         &lt;entry&gt;
+            &lt;key&gt;emac_timestamp_clk&lt;/key&gt;
+            &lt;value&gt;
+                &lt;connectionPointName&gt;emac_timestamp_clk&lt;/connectionPointName&gt;
+                &lt;suppliedSystemInfos&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;CLOCK_RATE&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
+                    &lt;/entry&gt;
+                &lt;/suppliedSystemInfos&gt;
+                &lt;consumedSystemInfos/&gt;
+            &lt;/value&gt;
+        &lt;/entry&gt;
+        &lt;entry&gt;
             &lt;key&gt;emif_hps_emif_ref_clk_0&lt;/key&gt;
             &lt;value&gt;
                 &lt;connectionPointName&gt;emif_hps_emif_ref_clk_0&lt;/connectionPointName&gt;
@@ -340,6 +358,19 @@ Altera and sold by Altera or its authorized distributors.-->
             &lt;key&gt;spim0_sclk_out&lt;/key&gt;
             &lt;value&gt;
                 &lt;connectionPointName&gt;spim0_sclk_out&lt;/connectionPointName&gt;
+                &lt;suppliedSystemInfos/&gt;
+                &lt;consumedSystemInfos&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;CLOCK_RATE&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/consumedSystemInfos&gt;
+            &lt;/value&gt;
+        &lt;/entry&gt;
+        &lt;entry&gt;
+            &lt;key&gt;spim1_sclk_out&lt;/key&gt;
+            &lt;value&gt;
+                &lt;connectionPointName&gt;spim1_sclk_out&lt;/connectionPointName&gt;
                 &lt;suppliedSystemInfos/&gt;
                 &lt;consumedSystemInfos&gt;
                     &lt;entry&gt;
@@ -919,6 +950,10 @@ Altera and sold by Altera or its authorized distributors.-->
                             &lt;value&gt;false&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
+                            &lt;key&gt;isInterconnectIP&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
                             &lt;key&gt;maximumOutstandingReads&lt;/key&gt;
                             &lt;value&gt;1&lt;/value&gt;
                         &lt;/entry&gt;
@@ -985,6 +1020,10 @@ Altera and sold by Altera or its authorized distributors.-->
                         &lt;entry&gt;
                             &lt;key&gt;issuesFIXEDBursts&lt;/key&gt;
                             &lt;value&gt;true&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;maximumBurstLength&lt;/key&gt;
+                            &lt;value&gt;256&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
@@ -1430,6 +1469,10 @@ Altera and sold by Altera or its authorized distributors.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;isTranslator&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;isInterconnectIP&lt;/key&gt;
                             &lt;value&gt;false&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
@@ -2096,6 +2139,10 @@ Altera and sold by Altera or its authorized distributors.-->
                         &lt;value&gt;false&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
+                        &lt;key&gt;isInterconnectIP&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
                         &lt;key&gt;maximumOutstandingReads&lt;/key&gt;
                         &lt;value&gt;1&lt;/value&gt;
                     &lt;/entry&gt;
@@ -2162,6 +2209,10 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;entry&gt;
                         &lt;key&gt;issuesFIXEDBursts&lt;/key&gt;
                         &lt;value&gt;true&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;maximumBurstLength&lt;/key&gt;
+                        &lt;value&gt;256&lt;/value&gt;
                     &lt;/entry&gt;
                 &lt;/parameterValueMap&gt;
             &lt;/parameters&gt;
@@ -2607,6 +2658,10 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;/entry&gt;
                     &lt;entry&gt;
                         &lt;key&gt;isTranslator&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;isInterconnectIP&lt;/key&gt;
                         &lt;value&gt;false&lt;/value&gt;
                     &lt;/entry&gt;
                     &lt;entry&gt;
@@ -6142,6 +6197,10 @@ Altera and sold by Altera or its authorized distributors.-->
                             &lt;value&gt;false&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
+                            &lt;key&gt;isInterconnectIP&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
                             &lt;key&gt;maximumOutstandingReads&lt;/key&gt;
                             &lt;value&gt;1&lt;/value&gt;
                         &lt;/entry&gt;
@@ -6208,6 +6267,10 @@ Altera and sold by Altera or its authorized distributors.-->
                         &lt;entry&gt;
                             &lt;key&gt;issuesFIXEDBursts&lt;/key&gt;
                             &lt;value&gt;true&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;maximumBurstLength&lt;/key&gt;
+                            &lt;value&gt;256&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
@@ -6572,6 +6635,10 @@ Altera and sold by Altera or its authorized distributors.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;isTranslator&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;isInterconnectIP&lt;/key&gt;
                             &lt;value&gt;false&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
@@ -7038,6 +7105,10 @@ Altera and sold by Altera or its authorized distributors.-->
                             &lt;value&gt;false&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
+                            &lt;key&gt;isInterconnectIP&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
                             &lt;key&gt;maximumOutstandingReads&lt;/key&gt;
                             &lt;value&gt;1&lt;/value&gt;
                         &lt;/entry&gt;
@@ -7133,72 +7204,6 @@ Altera and sold by Altera or its authorized distributors.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;noNarrowTransfer&lt;/key&gt;
-                            &lt;value&gt;false&lt;/value&gt;
-                        &lt;/entry&gt;
-                    &lt;/parameterValueMap&gt;
-                &lt;/parameters&gt;
-            &lt;/interface&gt;
-            &lt;interface&gt;
-                &lt;name&gt;niosv_pio_in&lt;/name&gt;
-                &lt;type&gt;conduit&lt;/type&gt;
-                &lt;isStart&gt;false&lt;/isStart&gt;
-                &lt;ports&gt;
-                    &lt;port&gt;
-                        &lt;name&gt;niosv_pio_in_export&lt;/name&gt;
-                        &lt;role&gt;export&lt;/role&gt;
-                        &lt;direction&gt;Input&lt;/direction&gt;
-                        &lt;width&gt;32&lt;/width&gt;
-                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                        &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
-                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                    &lt;/port&gt;
-                &lt;/ports&gt;
-                &lt;assignments&gt;
-                    &lt;assignmentValueMap/&gt;
-                &lt;/assignments&gt;
-                &lt;parameters&gt;
-                    &lt;parameterValueMap&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;associatedClock&lt;/key&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;associatedReset&lt;/key&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;prSafe&lt;/key&gt;
-                            &lt;value&gt;false&lt;/value&gt;
-                        &lt;/entry&gt;
-                    &lt;/parameterValueMap&gt;
-                &lt;/parameters&gt;
-            &lt;/interface&gt;
-            &lt;interface&gt;
-                &lt;name&gt;niosv_pio_out&lt;/name&gt;
-                &lt;type&gt;conduit&lt;/type&gt;
-                &lt;isStart&gt;false&lt;/isStart&gt;
-                &lt;ports&gt;
-                    &lt;port&gt;
-                        &lt;name&gt;niosv_pio_out_export&lt;/name&gt;
-                        &lt;role&gt;export&lt;/role&gt;
-                        &lt;direction&gt;Output&lt;/direction&gt;
-                        &lt;width&gt;32&lt;/width&gt;
-                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
-                        &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
-                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
-                    &lt;/port&gt;
-                &lt;/ports&gt;
-                &lt;assignments&gt;
-                    &lt;assignmentValueMap/&gt;
-                &lt;/assignments&gt;
-                &lt;parameters&gt;
-                    &lt;parameterValueMap&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;associatedClock&lt;/key&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;associatedReset&lt;/key&gt;
-                        &lt;/entry&gt;
-                        &lt;entry&gt;
-                            &lt;key&gt;prSafe&lt;/key&gt;
                             &lt;value&gt;false&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
@@ -7419,6 +7424,72 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
             &lt;/interface&gt;
+            &lt;interface&gt;
+                &lt;name&gt;niosv_pio_in&lt;/name&gt;
+                &lt;type&gt;conduit&lt;/type&gt;
+                &lt;isStart&gt;false&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;niosv_pio_in_export&lt;/name&gt;
+                        &lt;role&gt;export&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;32&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap/&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedReset&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;prSafe&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+            &lt;interface&gt;
+                &lt;name&gt;niosv_pio_out&lt;/name&gt;
+                &lt;type&gt;conduit&lt;/type&gt;
+                &lt;isStart&gt;false&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;niosv_pio_out_export&lt;/name&gt;
+                        &lt;role&gt;export&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;32&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap/&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedReset&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;prSafe&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
         &lt;/interfaces&gt;
     &lt;/boundary&gt;
     &lt;originalModuleInfo&gt;
@@ -7615,7 +7686,7 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;12&lt;/value&gt;
+                            &lt;value&gt;14&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -7623,7 +7694,7 @@ Altera and sold by Altera or its authorized distributors.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;12&lt;/value&gt;
+                            &lt;value&gt;14&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
@@ -8391,6 +8462,10 @@ Altera and sold by Altera or its authorized distributors.-->
                             &lt;value&gt;false&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
+                            &lt;key&gt;isInterconnectIP&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
                             &lt;key&gt;maximumOutstandingReads&lt;/key&gt;
                             &lt;value&gt;1&lt;/value&gt;
                         &lt;/entry&gt;
@@ -8457,6 +8532,10 @@ Altera and sold by Altera or its authorized distributors.-->
                         &lt;entry&gt;
                             &lt;key&gt;issuesFIXEDBursts&lt;/key&gt;
                             &lt;value&gt;true&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;maximumBurstLength&lt;/key&gt;
+                            &lt;value&gt;256&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
@@ -8888,6 +8967,10 @@ Altera and sold by Altera or its authorized distributors.-->
                             &lt;value&gt;false&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
+                            &lt;key&gt;isInterconnectIP&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
                             &lt;key&gt;maximumOutstandingReads&lt;/key&gt;
                             &lt;value&gt;1&lt;/value&gt;
                         &lt;/entry&gt;
@@ -8954,6 +9037,77 @@ Altera and sold by Altera or its authorized distributors.-->
                         &lt;entry&gt;
                             &lt;key&gt;issuesFIXEDBursts&lt;/key&gt;
                             &lt;value&gt;true&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;maximumBurstLength&lt;/key&gt;
+                            &lt;value&gt;256&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+            &lt;interface&gt;
+                &lt;name&gt;emac_timestamp_clk&lt;/name&gt;
+                &lt;type&gt;clock&lt;/type&gt;
+                &lt;isStart&gt;false&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac_timestamp_clk_clk&lt;/name&gt;
+                        &lt;role&gt;clk&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap/&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;clockRate&lt;/key&gt;
+                            &lt;value&gt;0&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;externallyDriven&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;ptfSchematicName&lt;/key&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+            &lt;interface&gt;
+                &lt;name&gt;emac_timestamp_data&lt;/name&gt;
+                &lt;type&gt;conduit&lt;/type&gt;
+                &lt;isStart&gt;false&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac_timestamp_data_data_in&lt;/name&gt;
+                        &lt;role&gt;data_in&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;64&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap/&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedReset&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;prSafe&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/parameterValueMap&gt;
                 &lt;/parameters&gt;
@@ -9079,6 +9233,276 @@ Altera and sold by Altera or its authorized distributors.-->
                 &lt;/parameters&gt;
             &lt;/interface&gt;
             &lt;interface&gt;
+                &lt;name&gt;emac1_mdio&lt;/name&gt;
+                &lt;type&gt;conduit&lt;/type&gt;
+                &lt;isStart&gt;false&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mdio_mac_mdc&lt;/name&gt;
+                        &lt;role&gt;mac_mdc&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mdio_mac_mdi&lt;/name&gt;
+                        &lt;role&gt;mac_mdi&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mdio_mac_mdo&lt;/name&gt;
+                        &lt;role&gt;mac_mdo&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mdio_mac_mdoe&lt;/name&gt;
+                        &lt;role&gt;mac_mdoe&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap/&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedReset&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;prSafe&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+            &lt;interface&gt;
+                &lt;name&gt;emac1_i2c&lt;/name&gt;
+                &lt;type&gt;conduit&lt;/type&gt;
+                &lt;isStart&gt;false&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_i2c_mac_scl_i&lt;/name&gt;
+                        &lt;role&gt;mac_scl_i&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_i2c_mac_scl_oe&lt;/name&gt;
+                        &lt;role&gt;mac_scl_oe&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_i2c_mac_sda_i&lt;/name&gt;
+                        &lt;role&gt;mac_sda_i&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_i2c_mac_sda_oe&lt;/name&gt;
+                        &lt;role&gt;mac_sda_oe&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap/&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedReset&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;prSafe&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+            &lt;interface&gt;
+                &lt;name&gt;emac1&lt;/name&gt;
+                &lt;type&gt;conduit&lt;/type&gt;
+                &lt;isStart&gt;false&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_tx_clk_o&lt;/name&gt;
+                        &lt;role&gt;mac_tx_clk_o&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_tx_clk_i&lt;/name&gt;
+                        &lt;role&gt;mac_tx_clk_i&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_rx_clk&lt;/name&gt;
+                        &lt;role&gt;mac_rx_clk&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_rst_tx_n&lt;/name&gt;
+                        &lt;role&gt;mac_rst_tx_n&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_rst_rx_n&lt;/name&gt;
+                        &lt;role&gt;mac_rst_rx_n&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_txen&lt;/name&gt;
+                        &lt;role&gt;mac_txen&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_txer&lt;/name&gt;
+                        &lt;role&gt;mac_txer&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_rxdv&lt;/name&gt;
+                        &lt;role&gt;mac_rxdv&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_rxer&lt;/name&gt;
+                        &lt;role&gt;mac_rxer&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_rxd&lt;/name&gt;
+                        &lt;role&gt;mac_rxd&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;8&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_col&lt;/name&gt;
+                        &lt;role&gt;mac_col&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_crs&lt;/name&gt;
+                        &lt;role&gt;mac_crs&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_speed&lt;/name&gt;
+                        &lt;role&gt;mac_speed&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;3&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;emac1_mac_txd_o&lt;/name&gt;
+                        &lt;role&gt;mac_txd_o&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;8&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap/&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedReset&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;prSafe&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+            &lt;interface&gt;
                 &lt;name&gt;spim0&lt;/name&gt;
                 &lt;type&gt;conduit&lt;/type&gt;
                 &lt;isStart&gt;false&lt;/isStart&gt;
@@ -9181,6 +9605,143 @@ Altera and sold by Altera or its authorized distributors.-->
                 &lt;ports&gt;
                     &lt;port&gt;
                         &lt;name&gt;spim0_sclk_out_clk&lt;/name&gt;
+                        &lt;role&gt;clk&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap/&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedDirectClock&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;clockRate&lt;/key&gt;
+                            &lt;value&gt;0&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;clockRateKnown&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;externallyDriven&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;ptfSchematicName&lt;/key&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+            &lt;interface&gt;
+                &lt;name&gt;spim1&lt;/name&gt;
+                &lt;type&gt;conduit&lt;/type&gt;
+                &lt;isStart&gt;false&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;spim1_miso_i&lt;/name&gt;
+                        &lt;role&gt;miso_i&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;spim1_mosi_o&lt;/name&gt;
+                        &lt;role&gt;mosi_o&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;spim1_mosi_oe&lt;/name&gt;
+                        &lt;role&gt;mosi_oe&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;spim1_ss_in_n&lt;/name&gt;
+                        &lt;role&gt;ss_in_n&lt;/role&gt;
+                        &lt;direction&gt;Input&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;spim1_ss0_n_o&lt;/name&gt;
+                        &lt;role&gt;ss0_n_o&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;spim1_ss1_n_o&lt;/name&gt;
+                        &lt;role&gt;ss1_n_o&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;spim1_ss2_n_o&lt;/name&gt;
+                        &lt;role&gt;ss2_n_o&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;spim1_ss3_n_o&lt;/name&gt;
+                        &lt;role&gt;ss3_n_o&lt;/role&gt;
+                        &lt;direction&gt;Output&lt;/direction&gt;
+                        &lt;width&gt;1&lt;/width&gt;
+                        &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                        &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                        &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                    &lt;/port&gt;
+                &lt;/ports&gt;
+                &lt;assignments&gt;
+                    &lt;assignmentValueMap/&gt;
+                &lt;/assignments&gt;
+                &lt;parameters&gt;
+                    &lt;parameterValueMap&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;associatedReset&lt;/key&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;prSafe&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/parameterValueMap&gt;
+                &lt;/parameters&gt;
+            &lt;/interface&gt;
+            &lt;interface&gt;
+                &lt;name&gt;spim1_sclk_out&lt;/name&gt;
+                &lt;type&gt;clock&lt;/type&gt;
+                &lt;isStart&gt;true&lt;/isStart&gt;
+                &lt;ports&gt;
+                    &lt;port&gt;
+                        &lt;name&gt;spim1_sclk_out_clk&lt;/name&gt;
                         &lt;role&gt;clk&lt;/role&gt;
                         &lt;direction&gt;Output&lt;/direction&gt;
                         &lt;width&gt;1&lt;/width&gt;
@@ -10469,6 +11030,10 @@ Altera and sold by Altera or its authorized distributors.-->
                             &lt;value&gt;false&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
+                            &lt;key&gt;isInterconnectIP&lt;/key&gt;
+                            &lt;value&gt;false&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
                             &lt;key&gt;maximumOutstandingReads&lt;/key&gt;
                             &lt;value&gt;1&lt;/value&gt;
                         &lt;/entry&gt;
@@ -11494,6 +12059,27 @@ Altera and sold by Altera or its authorized distributors.-->
             &lt;/descriptor&gt;
             &lt;descriptor&gt;
                 &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
+                &lt;parameterName&gt;AUTO_EMAC_TIMESTAMP_CLK_CLOCK_DOMAIN&lt;/parameterName&gt;
+                &lt;parameterType&gt;java.lang.Integer&lt;/parameterType&gt;
+                &lt;systemInfoArgs&gt;emac_timestamp_clk&lt;/systemInfoArgs&gt;
+                &lt;systemInfotype&gt;CLOCK_DOMAIN&lt;/systemInfotype&gt;
+            &lt;/descriptor&gt;
+            &lt;descriptor&gt;
+                &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
+                &lt;parameterName&gt;AUTO_EMAC_TIMESTAMP_CLK_CLOCK_RATE&lt;/parameterName&gt;
+                &lt;parameterType&gt;java.lang.Long&lt;/parameterType&gt;
+                &lt;systemInfoArgs&gt;emac_timestamp_clk&lt;/systemInfoArgs&gt;
+                &lt;systemInfotype&gt;CLOCK_RATE&lt;/systemInfotype&gt;
+            &lt;/descriptor&gt;
+            &lt;descriptor&gt;
+                &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
+                &lt;parameterName&gt;AUTO_EMAC_TIMESTAMP_CLK_RESET_DOMAIN&lt;/parameterName&gt;
+                &lt;parameterType&gt;java.lang.Integer&lt;/parameterType&gt;
+                &lt;systemInfoArgs&gt;emac_timestamp_clk&lt;/systemInfoArgs&gt;
+                &lt;systemInfotype&gt;RESET_DOMAIN&lt;/systemInfotype&gt;
+            &lt;/descriptor&gt;
+            &lt;descriptor&gt;
+                &lt;parameterDefaultValue&gt;-1&lt;/parameterDefaultValue&gt;
                 &lt;parameterName&gt;AUTO_EMIF_HPS_EMIF_REF_CLK_0_CLOCK_DOMAIN&lt;/parameterName&gt;
                 &lt;parameterType&gt;java.lang.Integer&lt;/parameterType&gt;
                 &lt;systemInfoArgs&gt;emif_hps_emif_ref_clk_0&lt;/systemInfoArgs&gt;
@@ -11742,6 +12328,27 @@ Altera and sold by Altera or its authorized distributors.-->
                 &lt;/value&gt;
             &lt;/entry&gt;
             &lt;entry&gt;
+                &lt;key&gt;emac_timestamp_clk&lt;/key&gt;
+                &lt;value&gt;
+                    &lt;connectionPointName&gt;emac_timestamp_clk&lt;/connectionPointName&gt;
+                    &lt;suppliedSystemInfos/&gt;
+                    &lt;consumedSystemInfos&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
+                            &lt;value&gt;-1&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;CLOCK_RATE&lt;/key&gt;
+                            &lt;value&gt;-1&lt;/value&gt;
+                        &lt;/entry&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
+                            &lt;value&gt;-1&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/consumedSystemInfos&gt;
+                &lt;/value&gt;
+            &lt;/entry&gt;
+            &lt;entry&gt;
                 &lt;key&gt;emif_hps_emif_ref_clk_0&lt;/key&gt;
                 &lt;value&gt;
                     &lt;connectionPointName&gt;emif_hps_emif_ref_clk_0&lt;/connectionPointName&gt;
@@ -11819,7 +12426,7 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;12&lt;/value&gt;
+                            &lt;value&gt;14&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -11827,7 +12434,7 @@ Altera and sold by Altera or its authorized distributors.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;12&lt;/value&gt;
+                            &lt;value&gt;14&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
@@ -11853,7 +12460,7 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;12&lt;/value&gt;
+                            &lt;value&gt;14&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -11861,7 +12468,7 @@ Altera and sold by Altera or its authorized distributors.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;12&lt;/value&gt;
+                            &lt;value&gt;14&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
@@ -11891,7 +12498,7 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;12&lt;/value&gt;
+                            &lt;value&gt;14&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -11899,7 +12506,7 @@ Altera and sold by Altera or its authorized distributors.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;12&lt;/value&gt;
+                            &lt;value&gt;14&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
@@ -11929,7 +12536,7 @@ Altera and sold by Altera or its authorized distributors.-->
                     &lt;consumedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;12&lt;/value&gt;
+                            &lt;value&gt;14&lt;/value&gt;
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -11937,7 +12544,7 @@ Altera and sold by Altera or its authorized distributors.-->
                         &lt;/entry&gt;
                         &lt;entry&gt;
                             &lt;key&gt;RESET_DOMAIN&lt;/key&gt;
-                            &lt;value&gt;12&lt;/value&gt;
+                            &lt;value&gt;14&lt;/value&gt;
                         &lt;/entry&gt;
                     &lt;/consumedSystemInfos&gt;
                 &lt;/value&gt;
@@ -11967,6 +12574,19 @@ Altera and sold by Altera or its authorized distributors.-->
                 &lt;key&gt;spim0_sclk_out&lt;/key&gt;
                 &lt;value&gt;
                     &lt;connectionPointName&gt;spim0_sclk_out&lt;/connectionPointName&gt;
+                    &lt;suppliedSystemInfos&gt;
+                        &lt;entry&gt;
+                            &lt;key&gt;CLOCK_RATE&lt;/key&gt;
+                            &lt;value&gt;0&lt;/value&gt;
+                        &lt;/entry&gt;
+                    &lt;/suppliedSystemInfos&gt;
+                    &lt;consumedSystemInfos/&gt;
+                &lt;/value&gt;
+            &lt;/entry&gt;
+            &lt;entry&gt;
+                &lt;key&gt;spim1_sclk_out&lt;/key&gt;
+                &lt;value&gt;
+                    &lt;connectionPointName&gt;spim1_sclk_out&lt;/connectionPointName&gt;
                     &lt;suppliedSystemInfos&gt;
                         &lt;entry&gt;
                             &lt;key&gt;CLOCK_RATE&lt;/key&gt;
@@ -12794,7 +13414,7 @@ Altera and sold by Altera or its authorized distributors.-->
       </altera:module>
     </altera:modules>
     <altera:connections>
-      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="hdmi_f2s.axi4_man" altera:end="u_shell_subsys.f2sdram">
+      <altera:connection altera:kind="avalon" altera:version="26.3" altera:start="hdmi_f2s.axi4_man" altera:end="u_shell_subsys.f2sdram">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0000"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -12817,7 +13437,7 @@ Altera and sold by Altera or its authorized distributors.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="hdmi_span.expanded_master" altera:end="hdmi_f2s.axi4_sub">
+      <altera:connection altera:kind="avalon" altera:version="26.3" altera:start="hdmi_span.expanded_master" altera:end="hdmi_f2s.axi4_sub">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0000"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -12840,7 +13460,7 @@ Altera and sold by Altera or its authorized distributors.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="u_fabric_subsys.fpga2hps_ace5lite_master" altera:end="u_shell_subsys.fpga2hps">
+      <altera:connection altera:kind="avalon" altera:version="26.3" altera:start="u_fabric_subsys.fpga2hps_ace5lite_master" altera:end="u_shell_subsys.fpga2hps">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0000"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -12863,7 +13483,7 @@ Altera and sold by Altera or its authorized distributors.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="u_shell_subsys.hps2fpga" altera:end="u_fabric_subsys.hps2fpga_bridge">
+      <altera:connection altera:kind="avalon" altera:version="26.3" altera:start="u_shell_subsys.hps2fpga" altera:end="u_fabric_subsys.hps2fpga_bridge">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0000"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -12886,7 +13506,7 @@ Altera and sold by Altera or its authorized distributors.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="avalon" altera:version="26.1" altera:start="u_shell_subsys.lwhps2fpga" altera:end="u_fabric_subsys.lwhps2fpga_bridge">
+      <altera:connection altera:kind="avalon" altera:version="26.3" altera:start="u_shell_subsys.lwhps2fpga" altera:end="u_fabric_subsys.lwhps2fpga_bridge">
         <altera:connection_parameter altera:parameter_name="arbitrationPriority" altera:parameter_value="1"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="baseAddress" altera:parameter_value="0x0000"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="defaultConnection" altera:parameter_value="false"></altera:connection_parameter>
@@ -12909,29 +13529,29 @@ Altera and sold by Altera or its authorized distributors.-->
         <altera:connection_parameter altera:parameter_name="qsys_mm.syncResets" altera:parameter_value="TRUE"></altera:connection_parameter>
         <altera:connection_parameter altera:parameter_name="qsys_mm.widthAdapterImplementation" altera:parameter_value="GENERIC_CONVERTER"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="hdmi_refclk.out_clk" altera:end="hdmi_pll.refclk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="u_shell_subsys.system_clock" altera:end="u_sys_reset.clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="u_shell_subsys.system_clock" altera:end="hdmi_span.clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="u_shell_subsys.system_clock" altera:end="hdmi_f2s.clock"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="u_shell_subsys.system_clock" altera:end="u_shell_subsys.f2sdram_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="u_shell_subsys.system_clock" altera:end="u_shell_subsys.fpga2hps_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="u_shell_subsys.system_clock" altera:end="u_shell_subsys.hps2fpga_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="u_shell_subsys.system_clock" altera:end="u_sys_clock.in_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="u_shell_subsys.system_clock" altera:end="u_shell_subsys.lwhps2fpga_clk"></altera:connection>
-      <altera:connection altera:kind="clock" altera:version="26.1" altera:start="u_shell_subsys.system_clock" altera:end="u_fabric_subsys.system_clock_in"></altera:connection>
-      <altera:connection altera:kind="interrupt" altera:version="26.1" altera:start="u_shell_subsys.f2h_irq0_in" altera:end="u_fabric_subsys.push_buttons_interrupt_sender">
+      <altera:connection altera:kind="clock" altera:version="26.3" altera:start="hdmi_refclk.out_clk" altera:end="hdmi_pll.refclk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.3" altera:start="u_shell_subsys.system_clock" altera:end="u_sys_reset.clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.3" altera:start="u_shell_subsys.system_clock" altera:end="hdmi_span.clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.3" altera:start="u_shell_subsys.system_clock" altera:end="hdmi_f2s.clock"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.3" altera:start="u_shell_subsys.system_clock" altera:end="u_shell_subsys.f2sdram_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.3" altera:start="u_shell_subsys.system_clock" altera:end="u_shell_subsys.fpga2hps_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.3" altera:start="u_shell_subsys.system_clock" altera:end="u_shell_subsys.hps2fpga_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.3" altera:start="u_shell_subsys.system_clock" altera:end="u_sys_clock.in_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.3" altera:start="u_shell_subsys.system_clock" altera:end="u_shell_subsys.lwhps2fpga_clk"></altera:connection>
+      <altera:connection altera:kind="clock" altera:version="26.3" altera:start="u_shell_subsys.system_clock" altera:end="u_fabric_subsys.system_clock_in"></altera:connection>
+      <altera:connection altera:kind="interrupt" altera:version="26.3" altera:start="u_shell_subsys.f2h_irq0_in" altera:end="u_fabric_subsys.push_buttons_interrupt_sender">
         <altera:connection_parameter altera:parameter_name="irqNumber" altera:parameter_value="0"></altera:connection_parameter>
       </altera:connection>
-      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="u_shell_subsys.h2f_reset" altera:end="u_shell_subsys.h2f_reset_in"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="u_shell_subsys.system_reset_n" altera:end="u_shell_subsys.f2sdram_rst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="u_shell_subsys.system_reset_n" altera:end="u_shell_subsys.fpga2hps_rst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="u_shell_subsys.system_reset_n" altera:end="u_shell_subsys.hps2fpga_rst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="u_shell_subsys.system_reset_n" altera:end="u_sys_reset.in_reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="u_shell_subsys.system_reset_n" altera:end="u_shell_subsys.lwhps2fpga_rst"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="u_shell_subsys.system_reset_n" altera:end="hdmi_pll.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="u_shell_subsys.system_reset_n" altera:end="hdmi_span.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="u_shell_subsys.system_reset_n" altera:end="hdmi_f2s.reset"></altera:connection>
-      <altera:connection altera:kind="reset" altera:version="26.1" altera:start="u_shell_subsys.system_reset_n" altera:end="u_fabric_subsys.system_reset_in"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.3" altera:start="u_shell_subsys.h2f_reset" altera:end="u_shell_subsys.h2f_reset_in"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.3" altera:start="u_shell_subsys.system_reset_n" altera:end="u_shell_subsys.f2sdram_rst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.3" altera:start="u_shell_subsys.system_reset_n" altera:end="u_shell_subsys.fpga2hps_rst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.3" altera:start="u_shell_subsys.system_reset_n" altera:end="u_shell_subsys.hps2fpga_rst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.3" altera:start="u_shell_subsys.system_reset_n" altera:end="u_sys_reset.in_reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.3" altera:start="u_shell_subsys.system_reset_n" altera:end="u_shell_subsys.lwhps2fpga_rst"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.3" altera:start="u_shell_subsys.system_reset_n" altera:end="hdmi_pll.reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.3" altera:start="u_shell_subsys.system_reset_n" altera:end="hdmi_span.reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.3" altera:start="u_shell_subsys.system_reset_n" altera:end="hdmi_f2s.reset"></altera:connection>
+      <altera:connection altera:kind="reset" altera:version="26.3" altera:start="u_shell_subsys.system_reset_n" altera:end="u_fabric_subsys.system_reset_in"></altera:connection>
     </altera:connections>
     <altera:interconnect_requirements></altera:interconnect_requirements>
     <altera:wire_level_connections></altera:wire_level_connections>
@@ -12945,6 +13565,11 @@ Altera and sold by Altera or its authorized distributors.-->
       <altera:interface_mapping altera:name="I2C0_scl_oe" altera:internal="u_shell_subsys.I2C0_scl_oe" altera:type="clock" altera:dir="start"></altera:interface_mapping>
       <altera:interface_mapping altera:name="emac0_i2c" altera:internal="u_shell_subsys.emac0_i2c" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="emac0_ptp" altera:internal="u_shell_subsys.emac0_ptp" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="emac1" altera:internal="u_shell_subsys.emac1" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="emac1_i2c" altera:internal="u_shell_subsys.emac1_i2c" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="emac1_mdio" altera:internal="u_shell_subsys.emac1_mdio" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="emac_timestamp_clk" altera:internal="u_shell_subsys.emac_timestamp_clk" altera:type="clock" altera:dir="end"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="emac_timestamp_data" altera:internal="u_shell_subsys.emac_timestamp_data" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="emif_hps_emif_mem_0" altera:internal="u_shell_subsys.emif_hps_emif_mem_0" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="emif_hps_emif_mem_ck_0" altera:internal="u_shell_subsys.emif_hps_emif_mem_ck_0" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="emif_hps_emif_mem_reset_n" altera:internal="u_shell_subsys.emif_hps_emif_mem_reset_n" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
@@ -12963,6 +13588,8 @@ Altera and sold by Altera or its authorized distributors.-->
       <altera:interface_mapping altera:name="pll_refclk_100" altera:internal="u_shell_subsys.pll_refclk_100" altera:type="clock" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="spim0" altera:internal="u_shell_subsys.spim0" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
       <altera:interface_mapping altera:name="spim0_sclk_out" altera:internal="u_shell_subsys.spim0_sclk_out" altera:type="clock" altera:dir="start"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="spim1" altera:internal="u_shell_subsys.spim1" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="spim1_sclk_out" altera:internal="u_shell_subsys.spim1_sclk_out" altera:type="clock" altera:dir="start"></altera:interface_mapping>
       <altera:interface_mapping altera:name="system_clk" altera:internal="u_sys_clock.out_clk" altera:type="clock" altera:dir="start"></altera:interface_mapping>
       <altera:interface_mapping altera:name="system_reset_n" altera:internal="u_sys_reset.out_reset" altera:type="reset" altera:dir="start"></altera:interface_mapping>
       <altera:interface_mapping altera:name="uart0" altera:internal="u_shell_subsys.uart0" altera:type="conduit" altera:dir="end"></altera:interface_mapping>
@@ -12979,11 +13606,11 @@ Altera and sold by Altera or its authorized distributors.-->
         <ipxact:busInterfaces>
           <ipxact:busInterface>
             <ipxact:name>hdmi_f2s.axi4_sub</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.3"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>hdmi_span.expanded_master</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="avalon" version="26.3"></ipxact:busType>
             <ipxact:master>
               <ipxact:addressSpaceRef addressSpaceRef="hdmi_span.expanded_master">
                 <ipxact:baseAddress>0x0000_0000_0000_0000</ipxact:baseAddress>
@@ -12992,11 +13619,11 @@ Altera and sold by Altera or its authorized distributors.-->
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>u_shell_subsys.f2sdram</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.3"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>hdmi_f2s.axi4_man</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.3"></ipxact:busType>
             <ipxact:master>
               <ipxact:addressSpaceRef addressSpaceRef="hdmi_f2s.axi4_man">
                 <ipxact:baseAddress>0x0000_0000_0000_0000</ipxact:baseAddress>
@@ -13005,11 +13632,11 @@ Altera and sold by Altera or its authorized distributors.-->
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>u_shell_subsys.fpga2hps</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="ace5lite" version="26.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="ace5lite" version="26.3"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>u_fabric_subsys.fpga2hps_ace5lite_master</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="ace5lite" version="26.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="ace5lite" version="26.3"></ipxact:busType>
             <ipxact:master>
               <ipxact:addressSpaceRef addressSpaceRef="u_fabric_subsys.fpga2hps_ace5lite_master">
                 <ipxact:baseAddress>0x0000_0000_0000_0000</ipxact:baseAddress>
@@ -13018,16 +13645,16 @@ Altera and sold by Altera or its authorized distributors.-->
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>u_fabric_subsys.f2sdram_bridge_adapter</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.3"></ipxact:busType>
             <ipxact:master></ipxact:master>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>u_fabric_subsys.hps2fpga_bridge</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.3"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>u_shell_subsys.hps2fpga</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.3"></ipxact:busType>
             <ipxact:master>
               <ipxact:addressSpaceRef addressSpaceRef="u_shell_subsys.hps2fpga">
                 <ipxact:baseAddress>0x0000_0000_0000_0000</ipxact:baseAddress>
@@ -13036,11 +13663,11 @@ Altera and sold by Altera or its authorized distributors.-->
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>u_fabric_subsys.lwhps2fpga_bridge</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.3"></ipxact:busType>
           </ipxact:busInterface>
           <ipxact:busInterface>
             <ipxact:name>u_shell_subsys.lwhps2fpga</ipxact:name>
-            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.1"></ipxact:busType>
+            <ipxact:busType vendor="intel" library="intel" name="axi4" version="26.3"></ipxact:busType>
             <ipxact:master>
               <ipxact:addressSpaceRef addressSpaceRef="u_shell_subsys.lwhps2fpga">
                 <ipxact:baseAddress>0x0000_0000</ipxact:baseAddress>

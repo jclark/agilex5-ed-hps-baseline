@@ -1,0 +1,1 @@
+applied by fpga/apply.sh; the SoC settings were checked
